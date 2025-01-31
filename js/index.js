@@ -223,53 +223,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex < slidesRed.length - 10) {
       currentIndex++;
     } else {
-      currentIndex = 0; // Carousel'ning boshiga qaytish
+      currentIndex = 0;
     }
     updateSlidePosition();
   });
 
-  updateSlidePosition(); // Sahifa yuklanganda slaydni yangilash
+  updateSlidePosition();
 });
-
-//TIMER SLIDER
-// let startX;
-// let currentIndex = 0;
-// const cards = document.querySelectorAll(".card-wrapper");
-// const totalCards = cards.length;
-
-// function updateSliderPosition() {
-//   const offset = -currentIndex * 100; // Move to the current card
-//   cards.forEach((card) => {
-//     card.style.transform = `translateX(${offset}%)`;
-//   });
-// }
-
-// function handleTouchStart(event) {
-//   startX = event.touches[0].clientX;
-// }
-
-// function handleTouchMove(event) {
-//   const moveX = event.touches[0].clientX;
-//   const diffX = startX - moveX;
-
-//   if (diffX > 50) {
-//     // Swipe left
-//     if (currentIndex < totalCards - 1) {
-//       currentIndex++;
-//       updateSliderPosition();
-//     }
-//   } else if (diffX < -50) {
-//     // Swipe right
-//     if (currentIndex > 0) {
-//       currentIndex--;
-//       updateSliderPosition();
-//     }
-//   }
-// }
-
-// const slider = document.querySelector(".slider");
-// slider.addEventListener("touchstart", handleTouchStart);
-// slider.addEventListener("touchmove", handleTouchMove);
 
 // CORUSEL RED
 
@@ -319,24 +279,6 @@ function snapToSlide() {
   });
 }
 
-// slider.addEventListener("touchstart", (e) => {
-//   isDown = true;
-//   startX = e.touches[0].pageX;
-//   scrollLeft = slider.scrollLeft;
-// });
-
-// slider.addEventListener("touchend", () => {
-//   isDown = false;
-//   snapToSlide();
-// });
-
-// slider.addEventListener("touchmove", (e) => {
-//   if (!isDown) return;
-//   const x = e.touches[0].pageX;
-//   const walk = (startX - x) * 1.5;
-//   slider.scrollLeft = scrollLeft + walk;
-// });
-
 // CHAT BOSGANDA CHIQISHI
 
 document.getElementById("chat-icon").addEventListener("click", function () {
@@ -353,8 +295,8 @@ document
       const messageElement = document.createElement("div");
       messageElement.textContent = message;
       document.getElementById("chat-messages").appendChild(messageElement);
-      messageInput.value = ""; // Inputni tozalash
-      messageElement.scrollIntoView(); // Eng yangi xabarni ko'rsatish
+      messageInput.value = "";
+      messageElement.scrollIntoView();
     }
   });
 
@@ -436,9 +378,9 @@ function createCard(img, name, become, price) {
   comparisonIcon.addEventListener("click", function () {
     let currentFill = comparisonIcon.style.fill;
     if (currentFill === "gray") {
-      comparisonIcon.style.fill = "red"; // Agar fill grey bo'lsa, red qil
+      comparisonIcon.style.fill = "red";
     } else {
-      comparisonIcon.style.fill = "gray"; // Aks holda green qil
+      comparisonIcon.style.fill = "gray";
     }
   });
   return newElement;

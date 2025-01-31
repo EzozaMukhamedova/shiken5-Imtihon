@@ -1,7 +1,7 @@
 #chat-icon {
   position: fixed;
   right: 10px;
-  bottom: 10px;
+  bottom: 0;
   width: 64px;
   height: 64px;
   cursor: pointer;
@@ -72,7 +72,7 @@
 }
 
 .olcha-chat-btn {
-  margin-top: 40px;
+  margin-top: 50px;
   transform: translateY(150px);
   width: 100px;
   padding: 10px 20px;
@@ -91,11 +91,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-// .olcha-chat-btn:active {
-//   background-color: #9a0007;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-//   transform: translateY(2px);
-// }
 .olcha-chat-close {
   transform: translateY(-235px) translateX(120px);
   width: 0px;
