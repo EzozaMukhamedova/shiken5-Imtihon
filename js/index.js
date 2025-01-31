@@ -40,7 +40,6 @@ function createCard(img, name, price) {
 
               <div class="cards__btn-wrap">
                 <a class="cards__card-btn" href=""><img class="icon" src="./assets/icons/icon.svg" alt=""></a>
-                <a class="cards__card-btn1" href="">Muddatli to'lov</a>
               </div>
 `;
 
@@ -231,8 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updateSlidePosition();
 });
 
-// CORUSEL RED
-
 // CARD AYLANISHI
 const slider = document.querySelector(".slider");
 let isDown = false;
@@ -316,7 +313,7 @@ window.addEventListener("click", function (e) {
   }
 });
 
-///
+///CARD QISMI
 const wrapperElemnt = document.querySelector(".famous__wrapper");
 async function fetchProducts() {
   try {

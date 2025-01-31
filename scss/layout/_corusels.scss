@@ -13,6 +13,7 @@
   font-weight: 700;
   color: black;
 }
+
 .carousel-slide {
   display: flex;
   width: calc(100% * 12 / 10);
@@ -26,22 +27,22 @@
   transition: transform 0.2s ease-in-out;
   position: relative;
   overflow: hidden;
-}
 
-.carousel-item img {
-  width: 140px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-}
+  img {
+    width: 140px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
 
-.carousel-item img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
 
-.carousel-item:hover .item-caption {
-  color: #da002b;
+  &:hover .item-caption {
+    color: #da002b;
+  }
 }
 
 .item-caption {

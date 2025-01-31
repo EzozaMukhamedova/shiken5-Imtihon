@@ -22,7 +22,6 @@
         width: 100%;
         height: 385px;
         border-radius: 10px;
-
       }
 
       &.active {
@@ -32,12 +31,14 @@
     }
 
     &:hover .btn {
-      display: block; /* Hover holatida tugmalarni ko'rsatish */
+      display: block;
+      opacity: 0.8;
+      transition: opacity 0.3s ease, display 0s 0.3s;
     }
   }
 
   .btn {
-    display: none; /* Asosiy holatda tugmalarni yashirish */
+    display: none;
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
@@ -50,23 +51,23 @@
     color: $text-color;
     background-color: $button-hover-color;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.169);
-    transition: transform 0.2s ease-in-out;
-  }
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease, display 0s 0.3s;
 
-  .prev {
-    left: 10px;
-    background-color: #ffffff;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-  }
+    &.prev,
+    &.next {
+      background-color: #ffffff;
+      border-radius: 50px;
+      width: 40px;
+      height: 40px;
+    }
 
-  .next {
-    right: 10px;
-    background-color: #ffffff;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
+    &.prev {
+      left: 10px;
+    }
+
+    &.next {
+      right: 10px;
+    }
   }
 }
 
@@ -86,29 +87,34 @@
   border: 3px solid $secondary-color;
   border-radius: 10px;
   font-family: Arial, sans-serif;
+
   &-yellBtn {
-    background-color: rgb(255, 196, 0);
+    background-color: rgb(255, 251, 0);
     color: black;
     width: 150px;
     border-radius: 5px;
 
     &-span {
-      padding: 2px;
+      padding: 5px 2px;
+      font-weight: 300;
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
+
   &-top {
     background-color: red;
     border-radius: 5px;
     color: white;
     padding: 2px 5px;
     width: 50px;
+
     &_p {
       color: black;
       margin-bottom: 20px;
     }
+
     &_img {
       width: 170px;
       margin: 0 auto;
@@ -119,10 +125,12 @@
     display: flex;
     align-items: center;
   }
+
   &-tree {
     display: flex;
     justify-content: space-between;
   }
+
   .price {
     font-size: 16px;
     text-decoration: line-through;
@@ -139,7 +147,6 @@
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.251);
     color: rgb(0, 0, 0);
-    // padding: 10px;
     border-radius: 5px;
     text-align: center;
     font-size: 1.2rem;
@@ -148,6 +155,7 @@
 
 .dots {
   position: absolute;
+  margin-top: 20px;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -156,51 +164,44 @@
   justify-content: center;
   gap: 8px;
   z-index: 100;
+
+  .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: rgba(56, 0, 56, 0.185);
+    transition: background-color 0.2s;
+
+    &.active,
+    &:hover {
+      background-color: red;
+    }
+  }
 }
 
-.dot {
-  cursor: pointer;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: rgba(56, 0, 56, 0.185);
-  transition: background-color 0.2s;
-}
-
-.dot.active,
-.dot:hover {
-  background-color: red;
-}
-
-///////
-///
 .slider {
   display: flex;
   overflow: hidden;
   cursor: grab;
   scroll-behavior: smooth;
   width: 100%;
-}
 
-.card-wrapper {
-  flex: 0 0 100%;
-  transition: transform 0.3s ease-in-out;
-  user-select: none;
-}
+  .card-wrapper {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease-in-out;
+    user-select: none;
 
-.slider:active {
-  cursor: grabbing;
-}
+    &:active {
+      cursor: grabbing;
+    }
 
-.card-top_img img {
-  // user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-.card-wrapper {
-  width: 275px;
+    .card-top_img img {
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  }
 }
