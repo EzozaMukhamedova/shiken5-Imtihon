@@ -1,25 +1,6 @@
-// .product-ver {
-//   &__wrapper {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     border-radius: 12px;
-//     overflow: hidden;
-//   }
-//   &__imgs {
-//     border-radius: 12px;
-//     transition: 0.3s ease-in-out;
-//     img {
-//       border-radius: 12px;
-//     }
-//   }
-//   &__imgs img:hover {
-//     transform: scale(1.02);
-//   }
-// }
-
 .product-ver {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

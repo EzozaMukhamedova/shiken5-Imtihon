@@ -1,3 +1,59 @@
+body {
+  padding-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav__wrapper-top,
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo,
+.katalog,
+.form,
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  list-style: none;
+}
+
+.form {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-search {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
 .nav {
   background-color: #da002b;
   &__wrapper-top {
